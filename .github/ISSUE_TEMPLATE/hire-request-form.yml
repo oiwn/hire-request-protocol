@@ -1,0 +1,91 @@
+name: Hire Request Form
+description: Formal submission for initiating professional collaboration or employment discussion.
+title: "Hire Request: [Company Name]"
+labels: ["hire-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Hire Request Protocol (HRP)
+        Please complete this form to propose a professional collaboration or employment opportunity.
+
+  - type: input
+    id: company_name
+    attributes:
+      label: Company Name
+      placeholder: Example Corp
+    validations:
+      required: true
+
+  - type: input
+    id: contact_person
+    attributes:
+      label: Primary Contact (Name & Position)
+      placeholder: Jane Doe — Head of Engineering
+    validations:
+      required: true
+
+  - type: input
+    id: contact_email
+    attributes:
+      label: Contact Email
+      placeholder: jane.doe@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Proposed Role or Collaboration Scope
+      placeholder: e.g. Senior Rust Engineer (Distributed Systems)
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Brief Overview of the Project / Product
+      placeholder: >
+        Describe your main product, current challenges, and why this collaboration is needed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: compensation
+    attributes:
+      label: Compensation Range and Model
+      placeholder: >
+        Specify range, currency, and engagement type (contract/full-time/project).
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_environment
+    attributes:
+      label: Technical Environment
+      placeholder: >
+        Languages, infrastructure, and team practices relevant to the proposed role.
+    validations:
+      required: true
+
+  - type: textarea
+    id: interview_proposal
+    attributes:
+      label: Schedule Interview with Employer
+      description: >
+        Suggest a date/time for a 30-minute session where you (the employer) will be interviewed
+        regarding the company’s culture, technical practices, and long-term alignment.
+      placeholder: >
+        Example: "Available for a short call on Thursday 14:00–17:00 UTC+7"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I confirm that all information provided is accurate and represents an active opportunity.
+          required: true
+        - label: I understand that this submission initiates the employer interview process.
+          required: true
